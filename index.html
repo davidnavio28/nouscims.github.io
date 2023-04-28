@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirección</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const next = urlParams.get('next');
+            if (next) {
+                window.location.href = next;
+            }
+        });
+    </script>
 </head>
 <body>
-    <h1>Bienvenido</h1>
-    <p>
-        <a href="LandingPageLoginNousCims.html">Acceder a LandingPageLoginNousCims</a>
-    </p>
-    <p>
-        <a href="PhishingRecomendaciones.html">Acceder a PhishingRecomendaciones</a>
-    </p>
 </body>
 </html>
