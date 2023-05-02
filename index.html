@@ -7,9 +7,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
+            const rid = urlParams.get('rid');
             const next = urlParams.get('next');
             if (next) {
-                window.location.href = next;
+                // Asegúrate de que la URL de redirección incluye el parámetro rid
+                const redirectTo = next + (next.includes('?') ? '&' : '?') + 'rid=' + rid;
+                window.location.href = redirectTo;
             }
         });
     </script>
